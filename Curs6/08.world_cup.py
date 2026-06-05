@@ -5,8 +5,8 @@ st.set_page_config(page_title="World Cup 2026 Groups", layout="wide")
 
 @st.cache_data
 def load_data():
-    teams = pd.read_csv("date_kaggle_world_cup/teams.csv")
-    matches = pd.read_csv("date_kaggle_world_cup/matches.csv")
+    teams = pd.read_csv("https://raw.githubusercontent.com/sojog/Cloud-Data-Engineering-Tools-Link-Academy-2026/refs/heads/main/Curs6/date_kaggle_world_cup/teams.csv")
+    matches = pd.read_csv("https://raw.githubusercontent.com/sojog/Cloud-Data-Engineering-Tools-Link-Academy-2026/refs/heads/main/Curs6/date_kaggle_world_cup/matches.csv")
     return teams, matches
 
 teams, matches = load_data()
