@@ -6,8 +6,9 @@
 import streamlit as st
 import requests
 
-st.title("Calculeaza procent din pretul Bitcoin")
 
+
+st.title("Calculeaza procent din pretul Bitcoin")
 response = requests.get("https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT")
 st.json(response.json())
 
