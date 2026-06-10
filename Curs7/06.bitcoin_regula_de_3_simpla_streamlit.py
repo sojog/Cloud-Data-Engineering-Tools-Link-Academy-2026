@@ -15,7 +15,7 @@ def get_prices(symbols:list[str]):
     responses = []
     for currency in symbols:
         response = requests.get(f"https://api.binance.com/api/v3/avgPrice?symbol=BTC{currency}")
-        responses.append((currency, float(response.json()["price"])))
+        responses.append((currency, float(response.json().get("price",0))))
     return responses
 
 responses = get_prices(SYMBOLS)
